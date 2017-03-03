@@ -1,11 +1,8 @@
 <template>
-  <div>
-    <h3>Markdown Editor</h3>
-    <div class="markdown-editor">
-      <textarea :value="input" @input="update"></textarea>
-      <!--<textarea v-model="input"></textarea>-->
-      <div class="result" v-html="compiledMarkdown"></div>
-    </div>
+  <div class="markdown-editor">
+    <textarea :value="input" @input="update"></textarea>
+    <!--<textarea v-model="input"></textarea>-->
+    <div class="result" v-html="compiledMarkdown"></div>
   </div>
 </template>
 

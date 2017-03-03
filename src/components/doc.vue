@@ -1,5 +1,5 @@
 <template>
-  <div class="v-doc" v-html.bind="compiled"></div>
+  <div class="v-doc-container" v-html.bind="compiled"></div>
 </template>
 
 <script>

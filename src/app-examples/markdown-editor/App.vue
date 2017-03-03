@@ -7,7 +7,16 @@
       > https://vuejs.org/v2/examples/index.html
     </v-doc>
 
-    <v-example src="./markdown-editor.vue"></v-example>
+    <v-example :component="$options.components.MarkdownEditor"></v-example>
   </div>
 </template>
+
+<script>
+  import MarkdownEditor from './markdown-editor'
+  export default {
+    components: {
+      MarkdownEditor
+    }
+  }
+</script>
 
