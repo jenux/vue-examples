@@ -4,11 +4,11 @@ import App from './App'
 const routes = [
   {
     path: '',
-    component: require('./markdown-editor/markdown-editor')
+    component: require('./markdown-editor/App')
   },
   {
     path: 'markdown-editor',
-    component: require('./markdown-editor/markdown-editor'),
+    component: require('./markdown-editor/App'),
     title: 'Markdown Editor'
   },
   {
