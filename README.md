@@ -1,9 +1,10 @@
 # Collection of vue examples and related resources
 
-> A Vue.js project (vue-cli + webpack)
+> Built by vue-cli + webpack
+> Put all the vue examples demos together, show the result and review the source code.
 
 
-## Build Setup
+## Run the app
 
 ``` bash
 # install dependencies
@@ -11,12 +12,13 @@ npm install
 
 # serve with hot reload at localhost:8080
 npm run dev
+```
 
+## Build the app
+```
 # build for production with minification
 npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
