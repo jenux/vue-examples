@@ -1,9 +1,15 @@
 <template>
   <div>
-    <h1>Introduction</h1>
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Introduction</h1>
+        </div>
+      </div>
+    </section>
 
     <v-doc>
-      ## Declarative Rendering
+      # Declarative Rendering
     </v-doc>
 
     <v-example :component="$options.components.DeclarativeRendering"></v-example>
@@ -22,6 +28,9 @@
     components: {
       DeclarativeRendering,
       BindAttribute
+    },
+    mounted () {
+
     }
   }
 </script>

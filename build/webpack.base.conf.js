@@ -44,6 +44,10 @@ module.exports = {
         }
       },
       {
+        test: /\.vue!$/,
+        loader: 'raw-loader'
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig

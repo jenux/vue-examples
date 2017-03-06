@@ -1,12 +1,10 @@
 <template>
-  <nav>
-    <h1>Examples</h1>
-    <ul>
-      <li v-for="menu in menus">
-        <router-link :to="menuUrl(menu.path)">{{ menu.title }}</router-link>
-      </li>
+  <aside class="menu">
+    <p class="menu-label">Examples</p>
+    <ul class="menu-list" v-for="menu in menus">
+      <li><a><router-link :to="menuUrl(menu.path)">{{ menu.title }}</router-link></a></li>
     </ul>
-  </nav>
+  </aside>
 </template>
 
 <script>
@@ -14,12 +12,12 @@
 
   export default {
     computed: {
-      menus: function () {
+      menus () {
         return routes.filter(x => x.path !== '')
       }
     },
     methods: {
-      menuUrl: function () {
+      menuUrl () {
         let len = arguments.length - 1
         return this.$route.matched[len].path + '/' + arguments[len]
       }

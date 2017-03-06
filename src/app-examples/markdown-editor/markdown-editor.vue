@@ -11,13 +11,13 @@ import marked from 'marked'
 import _ from 'lodash'
 
 export default {
-  data: function () {
+  data () {
     return {
-      input: ''
+      input: '# Title'
     }
   },
   computed: {
-    compiledMarkdown: function () {
+    compiledMarkdown () {
       return marked(this.input)
     }
   },
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
   .markdown-editor {
     display: flex;
     border: 1px solid #ddd;
@@ -46,5 +46,25 @@ export default {
   }
   .markdown-editor .result {
     padding: 20px;
+  }
+
+  .markdown-editor h1,
+  .markdown-editor h2,
+  .markdown-editor h3,
+  .markdown-editor h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 1.2rem 0;
+  }
+  .markdown-editor h2 {
+    font-size: 1.15rem;
+    margin: 1rem 0;
+  }
+
+  .markdown-editor h3 {
+    font-size: 1rem
+  }
+  .markdown-editor h4 {
+    font-size: 0.9rem
   }
 </style>

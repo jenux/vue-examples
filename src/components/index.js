@@ -1,11 +1,10 @@
 import Example from './example'
-import Tabs from './tabs'
-import Pane from './pane'
 import Doc from './doc'
+import { Tabs, Tab } from './tabs/'
 
 export {
   Example,
+  Doc,
   Tabs,
-  Pane,
-  Doc
+  Tab
 }

@@ -1,9 +1,9 @@
 <template>
-  <div class="row">
-    <div class="col-md-2">
+  <div class="columns">
+    <div class="column">
       <sidebar></sidebar>
     </div>
-    <div class="col-md-10">
+    <div class="column is-three-quarters">
       <router-view></router-view>
     </div>
   </div>

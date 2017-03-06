@@ -1,17 +1,17 @@
 <template>
-  <nav>
-    <h1>Guide</h1>
-    <dl v-for="(menus, key) in menuGroups">
-      <dt v-if="key !== 'undefined'">{{ key }}</dt>
-      <dd>
-        <ul>
-          <li v-for="menu in menus">
-            <router-link :to="menuUrl(menu.path)">{{ menu.title }}</router-link>
-          </li>
-        </ul>
-      </dd>
-    </dl>
-  </nav>
+  <div>
+    <nav class="panel">
+      <p class="panel-heading">
+        Guide
+      </p>
+    </nav>
+    <aside class="menu" v-for="(menus, key) in menuGroups">
+      <p class="menu-label" v-if="key !== 'undefined'" v-text="key"></p>
+      <ul class="menu-list" v-for="menu in menus">
+        <li><a><router-link :to="menuUrl(menu.path)">{{ menu.title }}</router-link></a></li>
+      </ul>
+    </aside>
+  </div>
 </template>
 
 <script>
@@ -21,12 +21,12 @@
   export default {
     name: 'vue-guide-sidebar',
     computed: {
-      menuGroups: function () {
+      menuGroups () {
         return _.groupBy(routes.filter(x => x.path !== ''), 'tag')
       }
     },
     methods: {
-      menuUrl: function () {
+      menuUrl () {
         let len = arguments.length - 1
         return this.$route.matched[len].path + '/' + arguments[len]
       }

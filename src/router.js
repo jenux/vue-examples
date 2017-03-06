@@ -9,23 +9,31 @@ import { routes as guideRoutes, App as guideApp } from './app-guide/'
 let routes = [
   ...appRoutes,
   {
+    name: 'home',
     path: '/',
     redirect: '/guide'
   },
   {
     path: '/examples',
     component: exampleApp,
-    children: exampleRoutes
+    children: exampleRoutes,
+    meta: {
+      name: 'examples'
+    }
   },
   {
     path: '/guide',
     component: guideApp,
-    children: guideRoutes
+    children: guideRoutes,
+    meta: {
+      name: 'guide'
+    }
   }
 ]
 
 let router = new Router({
-  routes
+  routes,
+  linkActiveClass: 'is-active'
 })
 
 export { routes, router }
